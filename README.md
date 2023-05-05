@@ -6,7 +6,7 @@ I am Front and  Back End developer.
 
 *   🌍  Currently based in Karachi, Pakistan
 *   🖥️  See my portfolio at <a href='https://juniorawan06.github.io/Juniorawan06/'>Portfolio</a>
-*   🧠  Currently Learning Mern Stack Development.
+*   🧠  Currently Learning Mern Stack Development from Saylani Mass IT Training (SMIT).
 *   🤝  I'm open to collaborating on interesting projects as a developer.
 
 ### Skills
