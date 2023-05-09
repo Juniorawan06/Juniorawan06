@@ -1,0 +1,173 @@
+@font-face {
+  font-family: interBold;
+  src: url("../fonts/static/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: interRegular;
+  src: url("../fonts/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: interSemiBold;
+  src: url("../fonts/static/Inter-SemiBold.ttf");
+}
+* {
+  font-family: "interSemiBold", sans-serif;
+}
+body {
+  background-color: #f6f6f6 !important;
+}
+header nav ul {
+  list-style: none;
+}
+header nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+header nav a:hover {
+  color: #000000;
+}
+header .hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+}
+header .black-gradient-h1 {
+  position: relative;
+  font-size: 70px;
+  display: inline-block;
+  margin-bottom: 18px;
+  font-family: "interBold", sans-serif;
+  letter-spacing: -1.25px;
+  text-align: center;
+  background-image: linear-gradient(141deg, #969699, #1e1e22);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .location-wrapper {
+  font-size: 18px;
+  margin-top: 18px;
+  margin-bottom: 32px;
+  align-items: center;
+  color: #5e5e63;
+}
+header .hero-centered-paragraph {
+  font-size: 18px;
+  color: #5e5e63;
+  text-align: center;
+}
+header .particle-wrapper {
+  position: absolute;
+  top: -108px;
+  z-index: -75;
+  width: 700px;
+  height: 310px;
+}
+header .particle-8 {
+  position: absolute;
+  top: 364px;
+  left: 775px;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: #323235;
+  opacity: 0.15;
+  -webkit-transform: rotate(17deg);
+  -ms-transform: rotate(17deg);
+  transform: rotate(17deg);
+}
+header .particle-7 {
+  position: absolute;
+  top: 523px;
+  right: -20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: #323235;
+  opacity: 0.2;
+  -webkit-transform: rotate(-14deg);
+  -ms-transform: rotate(-14deg);
+  transform: rotate(-140deg);
+}
+header .particle-6 {
+  position: absolute;
+  top: 575px;
+  right: 222px;
+  width: 19px;
+  height: 19px;
+  border-radius: 4px;
+  background-color: #323235;
+  opacity: 0.2;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+header .particle-5 {
+  position: absolute;
+  top: 510px;
+  right: 525px;
+  width: 19px;
+  height: 19px;
+  border-radius: 4px;
+  background-color: #323235;
+  opacity: 0.2;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+header .particle-4 {
+  position: absolute;
+  top: 285px;
+  right: 500px;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background-color: #000;
+  opacity: 0.2;
+  -webkit-transform: rotate(26deg);
+  -ms-transform: rotate(26deg);
+  transform: rotate(26deg);
+}
+header .particle-3 {
+  position: absolute;
+  top: 355px;
+  right: 785px;
+  width: 14px;
+  height: 14px;
+  border-radius: 5px;
+  background-color: #323235;
+  opacity: 0.4;
+  -webkit-transform: rotate(-17deg);
+  -ms-transform: rotate(-17deg);
+  transform: rotate(-17deg);
+}
+header .particle-2 {
+  position: absolute;
+  top: 510px;
+  right: 751px;
+  width: 35px;
+  height: 35px;
+  border-radius: 9px;
+  background-color: #323235;
+  opacity: 0.3;
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+header .particle-1 {
+  position: absolute;
+  top: 300px;
+  right: 80px;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background-color: #323235;
+  opacity: 0.4;
+  -webkit-transform: rotate(51deg);
+  -ms-transform: rotate(51deg);
+  transform: rotate(51deg);
+}
