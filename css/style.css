@@ -14,29 +14,204 @@
   font-family: "interSemiBold", sans-serif;
 }
 body {
-  background-color: #f6f6f6 !important;
+  background: #f6f6f6;
 }
-header nav ul {
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 30px 25px;
+}
+.menu-items {
+  width: 300px;
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+  margin-right: 20px;
 }
-header nav a {
+
+nav a {
   text-decoration: none;
   color: #000000;
   font-weight: 500;
 }
-header nav a:hover {
+nav.main-menu a:hover {
   color: #000000;
 }
-header .hero-text-wrapper {
+header button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger,
+.menu {
+  position: fixed;
+}
+
+.burger {
+  z-index: 3;
+  top: 30px;
+  right: 20px;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  background-image: url("../img/menu.svg");
+  border-radius: 50%;
+  background-color: #1c1d20;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all ease 0.3s;
+  display: none;
+}
+.burger:hover {
+  background-color: #bbbbbc;
+}
+
+body.open .burger {
+  background-image: url("../img/close.svg");
+  background-color: #bbbbbc;
+}
+
+.menu {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: calc(100% - 20px);
+  height: 100vh;
+  background: #1c1d20;
+  translate: 400% 0;
+  transition: translate 0.8s cubic-bezier(.7, 0, .2, 1);
+  animation: menu-out 0.8s; 
+}
+
+.menu nav {
+  opacity: 0;
+}
+
+@keyframes menu-in {
+  0% {
+    clip-path: ellipse(60% 60% at 100% 50%);
+  }
+  30% {
+    clip-path: ellipse(60% 60% at 100% 50%);
+  }
+  100% {
+    clip-path: ellipse(120% 120% at 0% 50%);
+  }
+}
+@keyframes menu-out {
+  100% {
+    clip-path: ellipse(40% 60% at 100% 50%);
+  }
+  30% {
+    clip-path: ellipse(60% 60% at 100% 50%);
+  }
+  0% {
+    clip-path: ellipse(120% 120% at 0% 50%);
+  }
+}
+
+body.open .menu {
+  opacity: 1;
+  visibility: visible;
+  translate: 280%;
+  transition: translate 0.8s cubic-bezier(.105, .705, .32, 1);
+  animation: menu-in 0.8s;
+}
+
+body.open .menu nav {
+  opacity: 1;
+}
+
+.menu nav:hover a {
+  opacity: 0.25;
+}
+
+.menu nav a:hover {
+  opacity: 1;
+}
+
+.menu nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0;
 }
-header .black-gradient-h1 {
+
+.menu a {
   position: relative;
-  font-size: 70px;
+  color: #ffffff;
+  font-size: 34px;
+  padding: 24px 0;
+  width: 300px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.menu a::before,
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  transition: 0.4s;
+  background-color: #5e5e63 !important;
+}
+
+.menu a::before {
+  opacity: 0;
+  background: rgb(255 255 255 / 20%);
+}
+
+.menu a::after {
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  background: #f7f7f7;
+}
+
+.menu a:hover::before {
+  opacity: 1;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+body.open .menu a {
+  animation: appear 0.25s backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: -30px 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 220px 0;
+}
+.black-gradient-h1 {
+  position: relative;
+  font-size: 80px;
   display: inline-block;
   margin-bottom: 18px;
   font-family: "interBold", sans-serif;
@@ -48,26 +223,28 @@ header .black-gradient-h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-header .location-wrapper {
+.location-wrapper {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   margin-top: 18px;
   margin-bottom: 32px;
   align-items: center;
   color: #5e5e63;
 }
-header .hero-centered-paragraph {
+.hero-centered-paragraph {
   font-size: 18px;
   color: #5e5e63;
   text-align: center;
 }
-header .particle-wrapper {
+.particle-wrapper {
   position: absolute;
-  top: -108px;
+  top: -45px;
   z-index: -75;
   width: 700px;
   height: 310px;
 }
-header .particle-8 {
+.particle-8 {
   position: absolute;
   top: 364px;
   left: 775px;
@@ -80,7 +257,7 @@ header .particle-8 {
   -ms-transform: rotate(17deg);
   transform: rotate(17deg);
 }
-header .particle-7 {
+.particle-7 {
   position: absolute;
   top: 523px;
   right: -20px;
@@ -93,7 +270,7 @@ header .particle-7 {
   -ms-transform: rotate(-14deg);
   transform: rotate(-140deg);
 }
-header .particle-6 {
+.particle-6 {
   position: absolute;
   top: 575px;
   right: 222px;
@@ -106,7 +283,7 @@ header .particle-6 {
   -ms-transform: rotate(47deg);
   transform: rotate(47deg);
 }
-header .particle-5 {
+.particle-5 {
   position: absolute;
   top: 510px;
   right: 525px;
@@ -119,7 +296,7 @@ header .particle-5 {
   -ms-transform: rotate(40deg);
   transform: rotate(40deg);
 }
-header .particle-4 {
+.particle-4 {
   position: absolute;
   top: 285px;
   right: 500px;
@@ -132,7 +309,7 @@ header .particle-4 {
   -ms-transform: rotate(26deg);
   transform: rotate(26deg);
 }
-header .particle-3 {
+.particle-3 {
   position: absolute;
   top: 355px;
   right: 785px;
@@ -145,7 +322,7 @@ header .particle-3 {
   -ms-transform: rotate(-17deg);
   transform: rotate(-17deg);
 }
-header .particle-2 {
+.particle-2 {
   position: absolute;
   top: 510px;
   right: 751px;
@@ -158,7 +335,7 @@ header .particle-2 {
   -ms-transform: rotate(20deg);
   transform: rotate(20deg);
 }
-header .particle-1 {
+.particle-1 {
   position: absolute;
   top: 300px;
   right: 80px;
@@ -170,4 +347,22 @@ header .particle-1 {
   -webkit-transform: rotate(51deg);
   -ms-transform: rotate(51deg);
   transform: rotate(51deg);
+}
+.about h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  padding: 150px;
+  background-color: #eceff1;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+.about h2:hover {
+  box-shadow: 0 0 25px -10px;
+  transform: scale(1.03);
+}
+.about p {
+  font-size: 22px;
 }

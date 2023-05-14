@@ -5,26 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <script src="js/bootstrap.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
     <title>Haseeb Khalid</title>
   </head>
   <body>
     <header>
-      <nav class="d-flex justify-content-between lign-items-center p-5">
+      <div class="menu">
+        <nav>
+          <a href="#" style="animation-delay: 0.2s">Home</a>
+          <a href="#about" style="animation-delay: 0.3s">About</a>
+          <a href="#work" style="animation-delay: 0.4s">Work</a>
+          <a href="#contact" style="animation-delay: 0.5s">Contact</a>
+        </nav>
+      </div>
+      <nav class="main-menu">
+        <button class="burger" id="burger" onclick="toggleMenu()"></button>
         <a href="#" class="logo">
           <span class="ps-5">©</span>
           <span>Haseeb Khalid</span>
         </a>
-        <ul class="d-flex justify-content-center align-items-center">
-          <li class="px-5">
+        <ul class="menu-items">
+          <li>
             <a href="#work">Work</a>
-          </li class="px-5">
+          </li>
           <li>
             <a href="#about">About</a>
           </li>
-          <li class="px-5">
+          <li>
             <a href="#contact">Contact</a>
           </li>
         </ul>
@@ -32,7 +42,7 @@
 
       <div class="container hero-text-wrapper">
         <h1 class="black-gradient-h1">Hi, I'm Haseeb.</h1>
-        <div class="location-wrapper d-flex align-items-center">
+        <div class="location-wrapper">
           <img src="img/location-icon.svg" alt="loaction icon" class="location icon">
           <div class="strong-text">Karachi, Pakistan</div> 
         </div>
@@ -51,5 +61,26 @@
         </div>
       </div>
     </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="row about">
+          <div class="col-12 col-md-6 col-lg-6 my-4">
+            <h2>About Me</h2>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <p>I'm a passionate web developer with expertise in multiple technologies. I have a strong background in HTML, CSS, JavaScript, PHP, SQL, C#, Java, Bootstrap, and .NET Framework.</p>
+            <p>I love crafting clean, efficient, and user-friendly web solutions that bring ideas to life. With years of experience, I have successfully delivered numerous projects ranging from responsive websites to robust web applications.</p>
+            <p>I am constantly exploring new technologies and keeping up with the latest industry trends. I thrive on challenging projects that allow me to apply my problem-solving skills and creativity to deliver exceptional results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        
+      </div>
+    </section>
   </body>
 </html>
