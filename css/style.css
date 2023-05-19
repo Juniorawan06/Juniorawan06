@@ -207,7 +207,7 @@ body.open .menu a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 220px 0;
+  padding: 200px 0;
 }
 .black-gradient-h1 {
   position: relative;
@@ -236,6 +236,9 @@ body.open .menu a {
   font-size: 18px;
   color: #5e5e63;
   text-align: center;
+  max-width: 500px;
+  line-height: 150%;
+  font-family: "interRegular", sans-serif;
 }
 .particle-wrapper {
   position: absolute;
@@ -243,110 +246,111 @@ body.open .menu a {
   z-index: -75;
   width: 700px;
   height: 310px;
+  z-index: 1;
 }
 .particle-8 {
   position: absolute;
-  top: 364px;
-  left: 775px;
+  top: 320px;
+  left: 800px;
   width: 18px;
   height: 18px;
   border-radius: 3px;
   background-color: #323235;
   opacity: 0.15;
-  -webkit-transform: rotate(17deg);
-  -ms-transform: rotate(17deg);
-  transform: rotate(17deg);
+  -webkit-transform: rotate(-49deg);
+  -ms-transform: rotate(-49deg);
+  transform: rotate(-49deg);
 }
 .particle-7 {
   position: absolute;
-  top: 523px;
-  right: -20px;
+  top: 480px;
+  right: -60px;
   width: 16px;
   height: 16px;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #323235;
   opacity: 0.2;
-  -webkit-transform: rotate(-14deg);
-  -ms-transform: rotate(-14deg);
-  transform: rotate(-140deg);
+  -webkit-transform: rotate(-26deg);
+  -ms-transform: rotate(-26deg);
+  transform: rotate(-26deg);
 }
 .particle-6 {
   position: absolute;
-  top: 575px;
-  right: 222px;
+  top: 560px;
+  right: 225px;
   width: 19px;
   height: 19px;
   border-radius: 4px;
   background-color: #323235;
   opacity: 0.2;
-  -webkit-transform: rotate(47deg);
-  -ms-transform: rotate(47deg);
-  transform: rotate(47deg);
+  -webkit-transform: rotate(23deg);
+  -ms-transform: rotate(23deg);
+  transform: rotate(23deg);
 }
 .particle-5 {
   position: absolute;
-  top: 510px;
-  right: 525px;
+  top: 485px;
+  right: 530px;
   width: 19px;
   height: 19px;
   border-radius: 4px;
   background-color: #323235;
   opacity: 0.2;
-  -webkit-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  transform: rotate(40deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
 }
 .particle-4 {
   position: absolute;
-  top: 285px;
-  right: 500px;
+  top: 250px;
+  right: 480px;
   width: 22px;
   height: 22px;
-  border-radius: 5px;
+  border-radius: 7px;
   background-color: #000;
   opacity: 0.2;
-  -webkit-transform: rotate(26deg);
-  -ms-transform: rotate(26deg);
-  transform: rotate(26deg);
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
 }
 .particle-3 {
   position: absolute;
-  top: 355px;
-  right: 785px;
+  top: 290px;
+  right: 800px;
   width: 14px;
   height: 14px;
   border-radius: 5px;
   background-color: #323235;
   opacity: 0.4;
-  -webkit-transform: rotate(-17deg);
-  -ms-transform: rotate(-17deg);
-  transform: rotate(-17deg);
+  -webkit-transform: rotate(17deg);
+  -ms-transform: rotate(17deg);
+  transform: rotate(17deg);
 }
 .particle-2 {
   position: absolute;
-  top: 510px;
-  right: 751px;
-  width: 35px;
-  height: 35px;
+  top: 460px;
+  right: 760px;
+  width: 38px;
+  height: 38px;
   border-radius: 9px;
   background-color: #323235;
   opacity: 0.3;
-  -webkit-transform: rotate(20deg);
-  -ms-transform: rotate(20deg);
-  transform: rotate(20deg);
+  -webkit-transform: rotate(-26deg);
+  -ms-transform: rotate(-26deg);
+  transform: rotate(-26deg);
 }
 .particle-1 {
   position: absolute;
-  top: 300px;
-  right: 80px;
+  top: 285px;
+  right: 30px;
   width: 32px;
   height: 32px;
   border-radius: 9px;
   background-color: #323235;
   opacity: 0.4;
-  -webkit-transform: rotate(51deg);
-  -ms-transform: rotate(51deg);
-  transform: rotate(51deg);
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
 }
 .about h2 {
   display: flex;
