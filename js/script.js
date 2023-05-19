@@ -36,8 +36,8 @@ function handleScroll() {
   );
 
   particleTop.forEach((particle) => {
-    particle.style.transform = `translate3d(${scrollY * 0.4}px, ${
-      scrollY * -0.4
+    particle.style.transform = `translate3d(${scrollY * 0.3}px, ${
+      scrollY * -0.3
     }px, 0) rotate(${scrollY}deg)`;
   });
   const particleRight = document.querySelectorAll(
@@ -45,8 +45,8 @@ function handleScroll() {
   );
 
   particleRight.forEach((particle) => {
-    particle.style.transform = `translate3d(${scrollY * 0.4}px, ${
-      scrollY * 0.4
+    particle.style.transform = `translate3d(${scrollY * 0.3}px, ${
+      scrollY * 0.3
     }px, 0) rotate(${scrollY}deg)`;
   });
 
@@ -55,8 +55,8 @@ function handleScroll() {
   );
 
   particleLeft.forEach((particle) => {
-    particle.style.transform = `translate3d(${scrollY * -0.4}px, ${
-      scrollY * -0.4
+    particle.style.transform = `translate3d(${scrollY * -0.3}px, ${
+      scrollY * -0.3
     }px, 0) rotate(${scrollY}deg)`;
   });
 
@@ -65,8 +65,8 @@ function handleScroll() {
   );
 
   particleBottom.forEach((particle) => {
-    particle.style.transform = `translate3d(${scrollY * -0.4}px, ${
-      scrollY * 0.4
+    particle.style.transform = `translate3d(${scrollY * -0.3}px, ${
+      scrollY * 0.3
     }px, 0) rotate(${scrollY}deg)`;
   });
 }
