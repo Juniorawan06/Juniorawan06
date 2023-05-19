@@ -7,8 +7,10 @@ window.onscroll = function () {
     document.documentElement.scrollTop >= 600
   ) {
     burger.style.display = "block";
-}
-else if(document.body.scrollTop <= 100 || document.documentElement.scrollTop <= 100){
-      burger.style.display = "none";
+  } else if (
+    document.body.scrollTop <= 100 ||
+    document.documentElement.scrollTop <= 100
+  ) {
+    burger.style.display = "none";
   }
 };
