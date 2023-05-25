@@ -20,12 +20,12 @@ const particles = document.querySelectorAll(".particle-wrapper > div");
 function handleMouseMovement(event) {
   const mouseX = (event.clientX / window.innerWidth) * 100;
   const mouseY = (event.clientY / window.innerHeight) * 100;
-
+  
   particles.forEach((particle, index) => {
     particle.style.transition = "all 0.5s ease";
     particle.style.transform = `translate3d(${mouseX * 0.4}px, ${
       mouseY * 0.4
-    }px, 0) scale3d(1, 1, 1) rotate(${mouseX}deg)`;
+    }px, 0) scale3d(1, 1, 1) rotate(${mouseY + mouseX}deg)`;
   });
 }
 
@@ -35,39 +35,39 @@ function handleScroll() {
     ".particle-wrapper .particle-1,.particle-8"
   );
 
-  particleTop.forEach((particle) => {
+  particleTop.forEach((particle, index) => {
     particle.style.transform = `translate3d(${scrollY * 0.3}px, ${
       scrollY * -0.3
-    }px, 0) rotate(${scrollY}deg)`;
+    }px, ${scrollY * 0.3}px) rotate(${index-49}deg)`;
   });
   const particleRight = document.querySelectorAll(
     ".particle-wrapper .particle-6,.particle-7"
   );
 
-  particleRight.forEach((particle) => {
+  particleRight.forEach((particle,index) => {
     particle.style.transform = `translate3d(${scrollY * 0.3}px, ${
       scrollY * 0.3
-    }px, 0) rotate(${scrollY}deg)`;
+    }px, ${scrollY * 0.3}px) rotate(${index+150}deg)`;
   });
 
   const particleLeft = document.querySelectorAll(
     ".particle-wrapper .particle-3,.particle-4"
   );
 
-  particleLeft.forEach((particle) => {
+  particleLeft.forEach((particle,index) => {
     particle.style.transform = `translate3d(${scrollY * -0.3}px, ${
       scrollY * -0.3
-    }px, 0) rotate(${scrollY}deg)`;
+    }px, ${scrollY * 0.3}px) rotate(${index+20}deg)`;
   });
 
   const particleBottom = document.querySelectorAll(
     ".particle-wrapper .particle-2,.particle-5"
   );
 
-  particleBottom.forEach((particle) => {
+  particleBottom.forEach((particle,index) => {
     particle.style.transform = `translate3d(${scrollY * -0.3}px, ${
       scrollY * 0.3
-    }px, 0) rotate(${scrollY}deg)`;
+    }px, ${scrollY * 0.3}px) rotate(${index+120}deg)`;
   });
 }
 
