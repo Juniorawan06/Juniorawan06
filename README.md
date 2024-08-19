@@ -1,7 +1,7 @@
-Hi !👋My name is Haseeb Khalid
+Hi !👋 I am haseeb
 ========================================================================================================================================
 
-I am Front and  Back End developer.
+I am Front and Back End developer.
 --------------------------
 
 *   🌍  Currently based in Karachi, Pakistan
